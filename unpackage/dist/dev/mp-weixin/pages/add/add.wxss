@@ -1,0 +1,43 @@
+.item {
+  border-bottom: 1px solid #dfdfdf;
+  padding: 20rpx;
+}
+.taskTitle {
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.taskContent {
+  height: 300rpx;
+}
+.uni-list-cell {
+  height: 60rpx;
+  line-height: 60rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.estimate {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.estimate .name {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.estimate input {
+  width: 10%;
+}
+

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "创建列表",
+  "usingComponents": {
+    "uni-calendar": "/components/uni-calendar/uni-calendar"
+  }
+}
