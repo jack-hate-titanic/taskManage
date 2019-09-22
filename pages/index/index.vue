@@ -16,8 +16,7 @@
 			}
 		},
 		onShow() {
-			uniRequest.get('/get').then((res) => {
-				debugger;
+			uniRequest.get('/user').then((res) => {
 				if(!res.data.success){
 					uni.navigateTo({
 						url:'../Login/Login'

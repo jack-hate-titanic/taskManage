@@ -92,6 +92,7 @@
 					} else {
 						uni.showModal({
 							title: res.data.msg,
+							showCancel:false
 						})
 					}
 				})

@@ -1,7 +1,6 @@
 <template>
 	<view>
 		<form @submit="formSubmit">
-
 			<view class="taskTitle item">
 				<input name="taskTitle" type="text" value="" class="input" placeholder="在这里输入任务标题" />
 			</view>
@@ -29,8 +28,8 @@
 			        优先级
 			    </view>
 			    <view class="uni-list-cell-db">
-			        <picker @change="bindPickerChange" :value="priIndex" :range="priArray">
-			            <view class="uni-input">{{priArray[priIndex]}}</view>
+			        <picker @change="bindPickerChange" :value="priIndex" :range="priArray" :range-key="'name'">
+			            <view class="uni-input">{{priArray[priIndex].name}}</view>
 			        </picker>
 			    </view>
 			</view> 
@@ -69,7 +68,7 @@
 		    },
 		data() {
 			return {
-				priArray: ['严重', '高', '中', '低'],
+				priArray: [],
 				priIndex: 0,
 				startTime:formatDate(new Date()),
 				endTime:formatDate(new Date()),
@@ -91,9 +90,11 @@
 			}
 		},
 		onShow() {
+			// 获取优先级
 			uniRequest.get('/priority/get').then((res)=>{
-				debugger;
+				this.priArray=res.data.result;
 			})
+			// 获取状态
 		},
 		methods: {
 			 bindTextAreaBlur(e) {
